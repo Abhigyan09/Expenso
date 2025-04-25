@@ -130,6 +130,39 @@ This diagram shows the data structure between users, wallets, and transactions i
 
 ---
 
+expense-tracker-app/
+├── app/                     # Expo Router pages
+│   ├── (tabs)/              # Tab navigation pages
+│   ├── auth/                # Login/Register screens
+│   └── profile/             # User profile related pages
+├── components/              # Reusable UI components
+├── context/                 # Global Context API files
+├── hooks/                   # Custom hooks
+├── lib/                     # Firebase & utility functions
+├── assets/                  # Images, icons, ER diagrams
+├── firebaseConfig.js        # Firebase credentials
+├── App.js                   # Entry point
+└── .env                     # Environment variables
+
+🙌 Contributing
+Feel free to fork this repo and open a pull request.
+
+Steps to contribute:
+Fork the repo 🍴
+
+Create a new branch (git checkout -b feature-name)
+
+Commit your changes (git commit -am 'Add new feature')
+
+Push to the branch (git push origin feature-name)
+
+Open a PR ✅
+
+📄 License
+MIT License © 2025 Abhigyan Yadav
+
+
+
 ## 🧑‍💻 Getting Started
 
 ### 1. Clone the repository
