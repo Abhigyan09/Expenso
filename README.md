@@ -33,6 +33,112 @@ When you're ready, run:
 npm run reset-project
 ```
 
+# 💸 Full-Stack Expense Tracker App
+
+A modern full-stack **Expense Tracker** mobile app built with **React Native, Expo Router, and Firebase**, designed to help users manage their finances on the go. Featuring real-time updates, dynamic financial insights, and a clean responsive UI — all with Firebase Auth, Firestore, and Cloudinary integration.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React Native, Expo, Expo Router, Tailwind (via NativeWind)
+- **Backend:** Firebase (Auth, Firestore, Storage), Cloudinary (Media)
+- **Navigation:** Expo Router (File-based routing)
+- **State Management:** React Context API
+- **Other Tools:** ESLint, Prettier, React Navigation, Reanimated
+
+---
+
+## 🚀 Features
+
+### ✅ Authentication
+- Firebase Email/Password Auth
+- Secure user login & registration
+- Biometric login support (optional)
+
+### 🧑‍💼 User Profiles
+- Profile info with avatar
+- Profile photo upload via **Cloudinary**
+- Edit profile & logout functionality
+
+### 💼 Wallet Management
+- Create multiple wallets (e.g., Cash, Bank)
+- View wallet balance & transactions
+- Delete wallets with confirmation
+
+### 🔄 Transactions
+- Add income/expense with category
+- Real-time data syncing via Firestore
+- Edit/delete transactions
+
+### 🔍 Dynamic Search
+- Search transactions by category, wallet, or notes
+- Instant filtering of data
+
+### 📊 Statistics Screen
+- Visualize expenses by category (pie chart)
+- Filter by time frame (daily/weekly/monthly)
+- Budget insights (planned feature)
+
+### 🧭 Custom Navigation
+- Bottom Tab Navigation via Expo Router
+- Stack Navigation for detail screens
+- Smooth animations with Reanimated
+
+---
+
+## 🖼 Screenshots
+
+> Upload your screenshots inside `/assets/screenshots` and reference them here:
+
+| Login Screen | Dashboard | Statistics |
+|--------------|-----------|------------|
+| ![](./assets/screenshots/login.png) | ![](./assets/screenshots/dashboard.png) | ![](./assets/screenshots/stats.png) |
+
+---
+
+## 🗂 Entity Relationship Diagram (ERD)
+
+This diagram shows the data structure between users, wallets, and transactions in Firestore:
+
+> Add your ERD diagram image to `/assets/er-diagram.png` and reference here:
+
+![ER Diagram](./assets/er-diagram.png)
+
+### ER Model Breakdown:
+- **Users**
+  - `uid: string`
+  - `email: string`
+  - `displayName: string`
+  - `photoURL: string`
+
+- **Wallets**
+  - `id: string`
+  - `name: string`
+  - `type: string` (e.g., Cash, Bank)
+  - `balance: number`
+  - `createdBy: uid`
+
+- **Transactions**
+  - `id: string`
+  - `amount: number`
+  - `type: "income" | "expense"`
+  - `category: string`
+  - `walletId: string`
+  - `userId: uid`
+  - `timestamp: Date`
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/expense-tracker-app.git
+cd expense-tracker-app
+
+
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
 ## Learn more
